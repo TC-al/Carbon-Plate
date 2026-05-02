@@ -1,0 +1,22 @@
+---
+import '../styles/global.css';
+const { title = 'Carbon Plate' } = Astro.props as { title?: string };
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content="Snap your dinner. We'll tell you what it cost the ocean." />
+    <link rel="icon" href="/illustrations/leaf.svg" type="image/svg+xml" />
+    <script defer src="https://unpkg.com/alpinejs@3.14.7/dist/cdn.min.js"></script>
+  </head>
+  <body class="min-h-screen">
+    <slot />
+    <footer class="py-10 text-center handwritten text-navy-500/70 text-sm">
+      made with too much steak by team carbon plate ·
+      <a class="underline" href="/about">about the numbers</a>
+    </footer>
+  </body>
+</html>
